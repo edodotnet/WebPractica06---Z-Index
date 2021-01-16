@@ -1,0 +1,98 @@
+/* Z-INDEX _ 15/01/2021
+display: flex; display: grid; inline-grid;
+justify-content: space-between;
+align-items: center;  */
+
+
+/* Fondo background */
+
+
+body{
+  margin: 0 auto;
+  width: 800px;
+}
+
+
+.layout{
+  display: grid;
+  grid-template-columns: repeat(2, 420px);
+  justify-content: center;
+  justify-items: center;
+}
+
+
+.exercice img{
+  max-width: 100%;
+  display: block;
+}
+
+
+
+.bg{
+    background-color: #293462 ; 
+    width: 418px;
+    height: 375px;
+
+    /* al crear un: display grid; flex; inline-grid; inline-flex; creamos un
+    "stacking context propio" (contexto de apilamiento)
+    implicando la existencia de un z-index */
+    display: grid;
+    place-items: center;
+    /* (auto no) valdria uno negativo pero mantenemos el orden 0 */
+    z-index: 0;
+  
+  }
+
+
+/* Surface orange */
+.soap-bar{
+  background-color: #fd5f54;
+  width: 170px;
+  height: 80px;
+  border-radius: 15px;
+
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+
+}
+
+
+/* agrupando pseudoelements */
+/* hijos directos del padre pero que telestudian a distance */
+
+.soap-bar::before,
+.soap-bar::after {
+  content:"";
+  position: absolute;
+  background-color: #a64942;
+  border-radius: 15px;
+
+}
+
+
+
+/* rehundido:hole */
+.soap-bar::before{
+  width: 120px;
+  height: 25px;
+  
+}
+
+
+
+/* sombra:shadow */
+.soap-bar::after{
+  width: 170px;
+  height: 50px;
+  bottom: -15px;
+
+  /* hijo por debajo del padre y padre sin z-index declarado */
+  z-index: -1;
+  
+
+}
+  
+

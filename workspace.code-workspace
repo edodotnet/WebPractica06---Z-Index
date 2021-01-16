@@ -1,0 +1,11 @@
+{
+	"folders": [
+		{
+			"path": "..\\..\\..\\Aux_Web\\Practicas-Web\\WebPractica05"
+		}
+	],
+	"settings": {
+		"liveServer.settings.port": 5501,
+		"liveServer.settings.multiRootWorkspaceName": "WebPractica06"
+	}
+}
